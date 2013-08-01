@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+/*
+
+set_error_handler(
+    create_function(
+        '$severity, $message, $file, $line',
+        'throw new ErrorException($message, $severity, $severity, $file, $line);'
+    )
+);
+try {
+    //file_get_contents($final_url);
+}
+catch (Exception $e) {
+echo $e->getMessage();
+exit(1);
+    if (strpos($e->getMessage(),'404') !== false) {
+    	header("Location: $url_of_404_page");
+    	exit(1);
+    	}
+if (strpos($e->getMessage(),'wrapper is disabled') !== false) {
+    	echo "Your Web Master has set allow_url_fopen as 0 to prevent fopen of http(s):// wrappers";
+    	exit(2);
+     	}
+}
+header("Location: $final_url");*/
